@@ -7,6 +7,10 @@ app.get('/', function (request, response) {
     response.sendFile(__dirname + '/index.html')
 });
 
+app.get('/socket.io.js', function (request, response) {
+    response.sendFile(__dirname + '/socket.io.js')
+});
+
 
 
 io.on('connection', function (socket) {
