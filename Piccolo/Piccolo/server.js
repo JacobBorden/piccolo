@@ -1,7 +1,7 @@
 ﻿var app = require('express')();
 var server = require('http').Server(app);
-var io = require('socket.io')(server);
-var port = 80;
+var io = require('socket.io').listen(server);
+var port = process.env.port;
 
 app.get('/', function (request, response) {
     response.sendFile(__dirname + '/index.html')
@@ -21,4 +21,4 @@ io.on('connection', function (socket) {
     });
 });
 
-server.listen(process.env.port);
+server.listen(port);
