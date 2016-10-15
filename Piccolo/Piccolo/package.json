@@ -2,7 +2,7 @@
   "name": "piccolo",
   "version": "0.0.1",
   "description": "Piccolo",
-  "main": "app.js",
+  "main": "server.js",
   "author": {
     "name": "Jacob Borden"
   },
