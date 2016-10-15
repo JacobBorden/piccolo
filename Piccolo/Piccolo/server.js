@@ -11,6 +11,9 @@ app.get('/socket.io.js', function (request, response) {
     response.sendFile(__dirname + '/socket.io.js')
 });
 
+app.get('/socket.io/', function (request, response) {
+    response.sendFile(__dirname + '/socket.io/')
+});
 
 
 io.on('connection', function (socket) {
