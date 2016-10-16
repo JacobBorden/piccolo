@@ -1,7 +1,7 @@
 ﻿var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io').listen(server);
-var port = process.env.port;
+var port = process.env.PORT || 80;
 
 app.get('/', function (request, response) {
     response.sendFile(__dirname + '/index.html')
